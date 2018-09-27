@@ -1,0 +1,57 @@
+#cool{
+	color: green;
+	text-align: center;
+}
+#topic{
+	text-align: center;
+	color: green;
+}
+.jumbotron{
+	background: #00FFFF;
+}
+.footer {
+  min-height:40px;
+
+  position: relative;
+  padding: 14px 12px;
+  font-size: 16px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+.butt{
+	text-align: center;
+}
+#helping{
+	font-size: 20px;
+	visibility: hidden;
+}
+
+.wrap{
+
+	 background-color: #008CBA;
+	 color: white;
+	 padding: 10px 20px;
+	 font-size: 16px;
+	 display: inline-block;
+	 margin: 4px 2px;
+	 cursor: pointer; 
+}
+.mydoc{
+	border: 1px solid #4CAF50;
+	padding: 100px;
+	font-size: 20px;
+}
+.form-control{
+
+}
+#search{
+	left: 392%;
+e  
+}
+#search1{
+	left:2000%;
+}

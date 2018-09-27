@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<title>MY web</title>
+	    
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#try").click(function foo(){
+
+		
+
+                                        $.ajax({
+                                                type:"POST",
+                                                url:"/simple",
+                                                data:"",
+                                                success:function(data){
+
+                                                	var res=data.concat(" ");
+                                                        $("#can").append(res);
+                                                        var n = data.localeCompare("exit");
+                                                        if(n != 0){
+                                                        foo();
+                                                    }
+                                                }
+
+                                        });
+
+                              
+		});
+		$("#core").click(function foo(){
+
+		
+
+                                        $.ajax({
+                                                type:"POST",
+                                                url:"/fullcore",
+                                                data:"",
+                                                success:function(data){
+
+                                                	var res=data.concat(" ");
+                                                        $("#can").append(res);
+                                                        var n = data.localeCompare("exit");
+                                                        if(n != 0){
+                                                        foo();
+                                                    }
+                                                }
+
+                                        });
+
+                              
+		});
+
+
+	});
+</script>
+</head>
+<body>
+<a href="{% url 'call' %}"><h2>cool</a>
+	<input type="button" id="try" value="asyncronus"/>
+	<input type="button" id="core" value="to the core"/>
+	<a href="{% url 'cool' %}"><input type="button" value="Buffering"></a>
+	<hr>
+	{% for i in context %}
+	<p>{{i}}</p>
+	{% endfor %}
+	<hr>
+	<h1>This is complety new</h1>
+	<p id="can"></p>
+</body>
+</html>
